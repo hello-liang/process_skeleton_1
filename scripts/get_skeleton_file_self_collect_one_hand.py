@@ -74,7 +74,7 @@ with mp_hands.Hands(model_complexity=0, min_detection_confidence=0.5, min_tracki
             cap = cv2.VideoCapture(path_data + 'HandWashDataset_self/' + action + '/' + video)
             video_name = video.split('.')[0]
             subject = video_name[-1]
-            path_joint = path_data + 'handwash_processed/' + action+ '/' + video
+            path_joint = path_data + 'handwash_processed/' + action+ '/' + video+'/'
             if not os.path.exists(path_joint):
                 os.makedirs(path_joint)
             f = open(path_joint + 'joint.txt', 'w')
